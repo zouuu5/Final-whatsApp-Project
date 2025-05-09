@@ -1,0 +1,204 @@
+/* WhatsApp Chat Analyzer Custom Styles */
+
+/* Main color scheme based on WhatsApp branding */
+:root {
+    --primary-color: #075E54;
+    --secondary-color: #128C7E;
+    --accent-color: #25D366;
+    --light-color: #DCF8C6;
+    --text-color: #333333;
+    --background-color: #F5F5F5;
+    --card-background: #FFFFFF;
+}
+
+/* Main container styling */
+.main {
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+/* Header styling */
+.main-header {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.sub-header {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Card styling */
+.card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Statistics display */
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Sidebar styling */
+.sidebar-content {
+    padding: 20px 0;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    background-color: var(--light-color);
+    border-radius: 10px;
+}
+
+/* User information display */
+.user-info {
+    padding: 15px;
+    background-color: var(--secondary-color); 
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Login container */
+.login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.btn-custom {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--primary-color);
+}
+
+/* Section divider */
+.section-divider {
+    margin: 40px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* File uploader */
+.uploadedFile {
+    border: 2px dashed var(--accent-color);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+/* Tables and dataframes */
+.dataframe {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataframe th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px;
+}
+
+.dataframe td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Loading spinner */
+.stSpinner > div {
+    border-top-color: var(--accent-color) !important;
+}
+
+/* Chart styling */
+.chart-container {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Download button styling */
+.stDownloadButton button {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+    width: 100% !important;
+    margin: 10px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.stDownloadButton button:hover {
+    background-color: var(--primary-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.download-section {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .main-header {
+        font-size: 2rem;
+    }
+    
+    .sub-header {
+        font-size: 1.2rem;
+    }
+}
