@@ -475,8 +475,17 @@ if st.session_state.logged_in:
                                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                                 filename = f"whatsapp_analysis_{selected_user}_{timestamp}.pdf"
                                 
+                                st.markdown(
+                                    f"""
+                                    <div id="pdf_download_success" style="color: #1e8e3e; padding: 10px; margin-top: 10px; border-radius: 5px; background-color: #e6f4ea; display: none;">
+                                     ✅ PDF report downloaded successfully!
+                                    </div>
+                                    """, 
+                                   unsafe_allow_html=True
+                               )
+                                
                                 st.download_button(
-                                    label="Download PDF Report",
+                                    label="Click here if download doesn't start automatically",
                                     data=pdf_buffer,
                                     file_name=filename,
                                     mime="application/pdf",
@@ -484,6 +493,15 @@ if st.session_state.logged_in:
                                 )
                                 
                                 st.success("PDF report generated successfully!")
+                                
+                                if st.session_state.username != "":
+                                    auth.record_analysis(
+                                        st.session_state.username, 
+                                        st.session_state.file_name, 
+                                        f"Downloaded PDF report for {selected_user}"
+                                       )
+                                
+                                
                             except Exception as e:
                                 st.error(f"Error generating PDF report: {e}")
                     
